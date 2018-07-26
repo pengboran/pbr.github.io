@@ -14,10 +14,10 @@
     <link href="css/index.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <audio autoplay="autoplay" loop="loop" id="autoPlayMuc">
+  <body ng-app="myApp" ng-controller="myHome">
+    <!--<audio autoplay="autoplay" loop="loop" id="autoPlayMuc">
     <source src="http://img1.wushang.com/img/2017/mobile/music.mp3" type="audio/mpeg">
-    </audio>
+    </audio>-->
     <div class="container">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -63,21 +63,17 @@
         </p>-->
       </div>
       <!--一片小文-->
- <div class="media jumbotron">
+ <div class="media jumbotron" ng-repeat="data in list">
   <div class="media-left media-middle">
     <a href="#">
-      <img class="media-object" src="img/shihua1.png" alt="..." style="width: 64px;height: 64px;">
+      <img class="media-object" src="{{data.imgUrl}}" alt="..." style="width: 64px;height: 64px;">
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading">前方的路</h4>
-慢慢的习惯了，你不在的时候，
-慢慢的感觉只剩一丝孤独。
-慢慢的我停留在原地，等待着你，
-再也没有见到远方的你。
-我没有檫去记忆的橡皮...
+       <h4 class="media-heading" ng-bind="data.title"></h4>
+        <div ng-bind="data.dec"></div>
         <p>
-          <a class="btn btn-default" href="https://mp.weixin.qq.com/s?__biz=MzU5MDA2MzE0NA==&mid=2247483654&idx=1&sn=236748711d305d51ebcc2fb09426bb6a&chksm=fdc2b241cab53b576d4e9c14eb04d317589ee21d1d0f1150abb17e1dec9ca500dbb6c07be9cc#rd" role="button">阅读全文》</a>
+          <a class="btn btn-default" ng-href="{{data.toLink}}" role="button">阅读全文》</a>
         </p>
   </div>
 </div>
@@ -88,6 +84,7 @@
     <script src="js/jq.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/angularJS.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/index.js"></script>
     <script src="js/canvas.js"></script>
 
