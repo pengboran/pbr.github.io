@@ -1,8 +1,114 @@
 <!DOCTYPE html>
-<html>
-<title>然</title>
-<body>
-<h1>你好</h1>
-<p></p>
-</body>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <link href="img/logo.png" rel="shortcut icon" type="image/x-icon">
+    <link href="img/logo.png" rel="icon" type="image/x-icon">
+    <link href="img/logo.png" rel="Bookmark" type="image/x-icon">
+    <title>pbrHome</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <audio autoplay="autoplay" loop="loop" id="autoPlayMuc">
+    <source src="http://img1.wushang.com/img/2017/mobile/music.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">个人主页</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">主页</a></li>
+              <li><a href="#">随笔文集</a></li>
+              <li><a href="https://www.cnblogs.com/pengBoRan/">博客</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">放松一下 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://pengboran.github.io/Game/h5game/3.10%E5%8F%91%E6%B3%84%E5%8A%A8%E7%94%BB/">发泄</a></li>
+                  <li><a href="https://pengboran.github.io/Game/h5game/%E5%A9%9A%E4%B9%A6/">婚书</a></li>
+                  <li><a href="https://pengboran.github.io/Game/cutFruit/">切水果</a></li>
+                  <li><a href="https://pengboran.github.io/html5/game/520Day/">连连看</a></li>
+                  <li><a href="https://pengboran.github.io/html5/game/camera/index.html">拍个照</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><div class="pauseBtn rotate">&nbsp;</div></a></li>
+              <li><a href="#">收藏</a></li>
+              <li><a href="#">文摘</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+      <!--前言-->
+       <div class="jumbotron">
+        <h3>前言</h1>
+        <p style="font-size: 16px;">在漫漫的前端路上，还有许多需要去学习，去磨练，记录自己在学习上的点点滴滴，没有系统的知识整理，学过的东西终将成为过往云烟，加油！同时把自己的爱好当做一种习惯，我是一个比较感性的人，喜欢写一点诗词，也希望把这属于我的一点价值记录在册</p>
+        <!--<p>
+          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+        </p>-->
+      </div>
+      <!--一片小文-->
+ <div class="media jumbotron">
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="img/shihua1.png" alt="..." style="width: 64px;height: 64px;">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">前方的路</h4>
+慢慢的习惯了，你不在的时候，
+慢慢的感觉只剩一丝孤独。
+慢慢的我停留在原地，等待着你，
+再也没有见到远方的你。
+我没有檫去记忆的橡皮...
+        <p>
+          <a class="btn btn-default" href="https://mp.weixin.qq.com/s?__biz=MzU5MDA2MzE0NA==&mid=2247483654&idx=1&sn=236748711d305d51ebcc2fb09426bb6a&chksm=fdc2b241cab53b576d4e9c14eb04d317589ee21d1d0f1150abb17e1dec9ca500dbb6c07be9cc#rd" role="button">阅读全文》</a>
+        </p>
+  </div>
+</div>
+
+
+    </div> <!-- /container -->
+        <canvas id="canvas"></canvas>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/canvas.js"></script>
+
+  </body>
+  <script>
+  		                 (function() {
+                var pause=true;
+                document.getElementsByClassName("pauseBtn")[0].onclick=function(){
+                    if (pause) {
+                        pause=false;
+                        document.getElementById("autoPlayMuc").pause();
+                        this.style.background="url(img/music2.png) no-repeat";
+                        this.style.backgroundSize="100% 100%";
+                    }else{
+                        pause=true;
+                        document.getElementById("autoPlayMuc").play();
+                        this.style.background="url('img/music1.png') no-repeat";
+                        this.style.backgroundSize="100% 100%";
+                    }
+
+                }
+            })();
+  </script>
 </html>

@@ -1,0 +1,36 @@
+/**音乐**/
+
+.pauseBtn {
+	background: url(../img/music1.png) no-repeat;
+	background-size: 100% 100%;
+/*	position: absolute;*/
+
+	width: 25px;
+	height: 25px;
+	/*top: 5px;
+	right: 15px;*/
+}
+
+.rotate {
+	-webkit-animation: rotate 3s infinite linear;
+	animation: rotate 3s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+canvas{position: fixed;width: 100%;height: 100%;top: 0;left: 0;pointer-events:none;}
